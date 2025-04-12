@@ -1,0 +1,7 @@
+# Ignorar banco de dados e arquivos temporários
+banco/chatbot.db
+__pycache__/
+*.log
+*.env
+node_modules/
+uploads/

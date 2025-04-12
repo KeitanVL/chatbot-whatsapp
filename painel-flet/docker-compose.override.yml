@@ -1,0 +1,11 @@
+  fletbot:
+    build: ./fletbot
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.fletbot.rule=Host(`painel.n8nautomatic.com`)"
+      - "traefik.http.routers.fletbot.entrypoints=websecure"
+      - "traefik.http.routers.fletbot.tls.certresolver=myresolver"
+      - "traefik.http.services.fletbot.loadbalancer.server.port=8550"
+    networks:
+      - traefik
+
